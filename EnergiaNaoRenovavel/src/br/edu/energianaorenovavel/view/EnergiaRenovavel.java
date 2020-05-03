@@ -32,6 +32,7 @@ public class EnergiaRenovavel extends javax.swing.JFrame {
         lblPontosPositivos = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         lblFonte.setText("Fonte:");
 

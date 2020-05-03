@@ -32,6 +32,7 @@ public class EnergiaNaoRenovavel extends javax.swing.JFrame {
         lblProblemas = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         lblFonte.setText("Fonte:");
 

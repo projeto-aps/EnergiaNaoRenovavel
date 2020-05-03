@@ -70,6 +70,7 @@ public class Introducao extends javax.swing.JFrame {
         txtIntroducao = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         lblIntroducao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lblIntroducao.setText("Energia Não-Renovável");
