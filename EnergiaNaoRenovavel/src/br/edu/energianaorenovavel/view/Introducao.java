@@ -6,19 +6,40 @@ import br.edu.energianaorenovavel.model.FonteRenovavel;
 public class Introducao extends javax.swing.JFrame {
 
     public FonteNaoRenovavel[] fontesNaoRenovaveis = {
-        novaFonteNaoRenovavel("Petróleo", "TesteTesteTesteTesteTesteTesteTesteTesteTeste", "TestandoTestandoTestandoTestandoTestandoTestandoTestando"),
-        novaFonteNaoRenovavel("Gás Natural", "TesteTesteTesteTestete", "TestandoTestandoTestandoTestandoTestandoTestandoTestando"),
-        novaFonteNaoRenovavel("Carvão Mineral", "teTesteTesteTesteTesteTesteTesteTeste", "TestandoTestandoTestandoTestandoTestandoTestandoTestando"),
-        novaFonteNaoRenovavel("Combustível Nuclear", "TeeTesteTesteTeste", "TestandoTestandoTestandoTestandoTestandoTestandoTestando")};
+        novaFonteNaoRenovavel("Petróleo", "É um recurso natural de caráter estratégico, pois é amplamente utilizado por veículos, constituindo-se "
+        + "como um elemento importante nos meios de transporte, além de também pode ser utilizado na fabricação de produtos derivados, "
+        + "notadamente o plástico.", "As consequências de utilizar-se do petróleo é que para a geração de energia é emitido muitos poluentes "
+        + "na atmosfera."),
+        novaFonteNaoRenovavel("Carvão Mineral", "A formação do carvão mineral assemelha-se, em partes, com a do petróleo, pois ambos são combustíveis "
+        + "fósseis.", "As consequências do carvão mineral, é a construção de poços e tuneis, que em alguns casos invadem áreas reservadas ou "
+        + "florestas, além disso, a queima do carvão mineral é considerada mais poluente que a do petróleo assim causando uma grande "
+        + "emissão de poluentes da atmosfera."),
+        novaFonteNaoRenovavel("Energia Nuclear", "A Energia Nuclear é obtida a partir do processo de fissão nuclear de átomos de urânio, que é "
+        + "considerado uma fonte esgotável de energia. Quando ocorre a fissão do núcleo desse material, libera-se uma grande quantidade de "
+        + "energia.", "Apesar de não emitirem poluentes gasosos na atmosfera existem muitas críticas devido aos elevados custos de produção, os "
+        + "altos riscos ambientais e sociais em casos de acidentes e também o fato de essa ser a mesma tecnologia utilizada para a fabricação "
+        + "de armamentos nucleares.")};
     public FonteRenovavel[] fontesRenovaveis = {
-        novaFonteRenovavel("Solar", "TesteTesteTesteTesteTesteTesteTesteTesteTeste", "TestandoTestandoTestandoTestandoTestandoTestandoTestando"),
-        novaFonteRenovavel("Eólica", "TesteTesteTesteTestete", "TestandoTestandoTestandoTestandoTestandoTestandoTestando"),
-        novaFonteRenovavel("Hidro", "teTesteTesteTesteTesteTesteTesteTeste", "TestandoTestandoTestandoTestandoTestandoTestandoTestando"),
-        novaFonteRenovavel("Nuclear Limpa", "TeeTesteTesteTeste", "TestandoTestandoTestandoTestandoTestandoTestandoTestando")};
+        novaFonteRenovavel("Solar", "A obtenção da energia solar, é captada por células fotovoltaicas presentes em painéis solares. Pode ser obtida de"
+        + " forma direta, por meio dos painéis constituídos por essas células fotovoltaicas ou coletores instalados nos telhados das residências,"
+        + " ou ainda de forma indireta, por meio da construção de usinas em áreas de intensa insolação, nas quais são instalados diversos "
+        + "coletores de energia solar.", "É considerada uma fonte de energia renovável e limpa, além de apresentar bom custo benefício. Trata-se "
+        + "de um recurso abundante, principalmente nas regiões intertropicais."),
+        novaFonteRenovavel("Eólica", "É uma fonte de energia que utiliza o vento como força motriz. A geração de energia eólica acontece por meio de "
+        + "equipamentos conhecidos como aerogeradores eólicos, que conseguem de converter a energia cinética dos ventos em energia elétrica.",
+        "A produção energética a partir da energia eólica apresenta baixo custo, uma vez que o vento é um recurso natural abundante. Este "
+        + "processo não produz ou emite nenhum gás poluente a atmosfera, sendo assim considerada uma fonte de energia limpa."),
+        novaFonteRenovavel("Maremotriz", "A obtenção desse tipo de energia pode ser feita por meio da energia das ondas, da energia das marés, "
+        + "da energia das correntes marítimas ou da energia térmica dos oceanos.", "É considerada uma energia limpa e que apresenta poucos "
+        + "riscos ao meio ambiente.")};
 
     public Introducao() {
         initComponents();
         this.setLocationRelativeTo(null); //Abre componente no centro da tela
+        txtIntroducao.setText("A energia não renovável (ou energia suja) são aquelas produzidas a partir de fontes de energia que se esgotam na natureza "
+                + "e, portanto, causam diversos impactos ambientais. Essa energia de origem orgânica (de origem vegetal ou animal) é limitada e demora "
+                + "milhões de anos para se formarem na natureza. Ainda que apresentam grandes quantidades, se esgotadas não podem ser regeneradas facilmente, "
+                + "uma vez que suas reservas são finitas.");
     }
 
     private FonteNaoRenovavel novaFonteNaoRenovavel(String nome, String descricao, String problemas) {
@@ -46,7 +67,7 @@ public class Introducao extends javax.swing.JFrame {
         btnNaoRenovaveis = new javax.swing.JButton();
         btnFontesAlternativas = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txtIntroducao = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,11 +88,12 @@ public class Introducao extends javax.swing.JFrame {
             }
         });
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        jScrollPane1.setViewportView(jTextArea1);
+        txtIntroducao.setEditable(false);
+        txtIntroducao.setColumns(20);
+        txtIntroducao.setLineWrap(true);
+        txtIntroducao.setRows(5);
+        txtIntroducao.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jScrollPane1.setViewportView(txtIntroducao);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -170,7 +192,7 @@ public class Introducao extends javax.swing.JFrame {
     private javax.swing.JButton btnNaoRenovaveis;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblIntroducao;
+    private javax.swing.JTextArea txtIntroducao;
     // End of variables declaration//GEN-END:variables
 }
